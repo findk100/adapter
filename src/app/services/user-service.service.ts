@@ -10,8 +10,8 @@ export class UserService {
   constructor(private httpClient: HttpClient) {}
 
   getAllData() {
-   const data = from([1,2,3,4,5])
-   return data;
+    const data = from([1, 2, 3, 4, 5]);
+    return data;
   }
 
   getAllUsers() {

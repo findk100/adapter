@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user-service.service';
-import { concatMap, delay, finalize, first, last, map, take } from 'rxjs/operators';
+import {
+  concatMap,
+  delay,
+  finalize,
+  first,
+  last,
+  map,
+  take,
+} from 'rxjs/operators';
 import { UserModel } from './model/user-model';
 import { Observable } from 'rxjs';
 
@@ -17,9 +25,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.userService
       .getAllData()
-      .pipe(
-        finalize(() => this.getAllUsers())
-      )
+      .pipe(finalize(() => this.getAllUsers()))
       .subscribe((res) => {
         console.log(res);
       });
