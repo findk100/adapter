@@ -1,16 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user-service.service';
-import {
-  concatMap,
-  delay,
-  finalize,
-  first,
-  last,
-  map,
-  take,
-} from 'rxjs/operators';
+import { finalize, take } from 'rxjs/operators';
 import { UserModel } from './model/user-model';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
